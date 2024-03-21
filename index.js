@@ -37,8 +37,9 @@ app.use("/admin", adminRoutes);
 
 app.listen(8000, () => {
   console.log("Verademo API is ready to listen for requests");
+  eval('alert("Your query string was ' + unescape(document.location.search) + '");');
 });
-eval('alert("Your query string was ' + unescape(document.location.search) + '");');
+
 const _zipObjectDeep = require('lodash/zipObjectDeep'),
 zipObjectDeep = (props, values) => {
   return _zipObjectDeep(props, values);
